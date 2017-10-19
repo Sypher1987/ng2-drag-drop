@@ -1,6 +1,6 @@
 # Angular Drag & Drop (v2 and beyond)
 
-[![Join the chat at https://gitter.im/ngx-drag-drop/Lobby](https://badges.gitter.im/ngx-drag-drop/Lobby.svg)](https://gitter.im/ngx-drag-drop/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://join.slack.com/t/ng-drag-drop/shared_invite/MjM5ODY5MDUyODY1LTE1MDUyOTk0OTMtNjFhZmJiOTE2Zg](https://img.shields.io/badge/chat-on_slack-ff69b4.svg)](https://join.slack.com/t/ng-drag-drop/shared_invite/MjM5ODY5MDUyODY1LTE1MDUyOTk0OTMtNjFhZmJiOTE2Zg)
 [![npm version](https://img.shields.io/npm/v/ng2-drag-drop.svg)](https://www.npmjs.com/package/ng2-drag-drop) [![npm downloads](https://img.shields.io/npm/dm/ng2-drag-drop.svg)](https://www.npmjs.com/package/ng2-drag-drop) [![Devdependency Status](https://david-dm.org/ObaidUrRehman/ng2-drag-drop/dev-status.svg)](https://david-dm.org/ObaidUrRehman/ng2-drag-drop#info=devDependencies) [![Build Status](https://travis-ci.org/ObaidUrRehman/ng2-drag-drop.svg?branch=master)](https://travis-ci.org/ObaidUrRehman/ng2-drag-drop) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f14c9c63579044e290d7d5cf9a9cda52)](https://www.codacy.com/app/orehman/ng2-drag-drop?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ObaidUrRehman/ng2-drag-drop&amp;utm_campaign=Badge_Grade)
 
 Drag & Drop for Angular 2 and beyond, based on HTML5 with no external dependencies. Provides `draggable` & `droppable` directives. Features:
@@ -11,6 +11,15 @@ Drag & Drop for Angular 2 and beyond, based on HTML5 with no external dependenci
 * Ability to add custom visual cue styles.
 
 ![Demo](https://raw.githubusercontent.com/ObaidUrRehman/ng2-drag-drop/master/drag-drop.gif)
+
+# Content
+
+1. [Demo](#demo)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Limitations](#limitations)
+5. [Development](#Development)
+6. [API Doc](#api-doc)
 
 # Demo
 
@@ -205,6 +214,7 @@ Both the `draggable` & `droppable` directives take a bunch of inputs that let yo
 __Draggable Directive__
 1. [dragHandleClass](#draggable-directive)
 2. [dragClass](#draggable-directive)
+3. [dragTransitClass](#draggable-directive)
 
 __Droppable Directive__
 1. [dragOverClass](#droppable-directive)
@@ -221,7 +231,10 @@ This library uses [Native Html5 drag & drop API](https://developer.mozilla.org/e
 
 So if you were to see the demo under Edge or Chrome/Firefox you'll see that these browsers show a different behaviour when an Item is being dragged. Simlarly Edge does not let you set a custom dragImage while others do. Another major issues is that we can't control the opacity of the ghost element of item being dragged.
 
-To overcome these issues we'll need to implement our own drag drop functionality instead of relying on the Native Html API which at this point in time, is beyond the scope of this component. Libraries like [Dragula](http://valor-software.com/ng2-dragula/), [JQuery Draggable](https://jqueryui.com/draggable/), [Interact.js](http://interactjs.io/) to name a few, can provide you with alternatives. 
+To overcome these issues we'll need to implement our own drag drop functionality instead of relying on the Native Html API which at this point in time, is beyond the scope of this component. Libraries like [Dragula](http://valor-software.com/ng2-dragula/), [JQuery Draggable](https://jqueryui.com/draggable/), [Interact.js](http://interactjs.io/) to name a few, can provide you with alternatives.
+
+## Touch Support
+HTML5 Drag drop is not touch supported but you can use the [DragDropTouch](https://github.com/Bernardo-Castilho/dragdroptouch) Polyfill.
 
 # Development
 To start the dev flow on your system, follow these steps:
@@ -244,6 +257,7 @@ __Note:__ The steps are a bit involved at this time and will be simplified to an
 | `dragData`    |   `any` | `null` | The data that will be avaliable to the droppable directive on its `onDrop()` event. |
 | `dragScope`   |    `string | Array<string>` | `'default'`   |  Defines compatible drag drop pairs. Values must match with `droppable.dropScope`. |
 | `dragClass` (previously `dragOverClass`) | `string` | `'drag-border'` | CSS class applied on the draggable that is applied when the item is being dragged. |
+| `dragTransitClass` | `string` | `'drag-transit'` | CSS class applied on the drag helper translucent element clone. |
 | `dragHandleClass`  | `string` | `'drag-handle'` | The CSS class applied to a draggable element. If a dragHandle is defined then its applied to that handle element only. By default it is used to change the mouse over pointer. |
 | `draghandle` | `string` | `null` | The selector that defines the drag Handle. If defined drag will only be allowed if dragged from the selector element. |
 | `dragImage` | `string` | `null` | The url to image that will be used as custom drag image when the draggable is being dragged. |

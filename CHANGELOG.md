@@ -1,5 +1,30 @@
-## 2.6.0 (2017-08-17)
+## 2.9.2 (2017-09-19)
+- This is actually version 2.9.0. See the note below.
 
+## 2.9.0, 2.9.1 (2017-09-19)
+__Note:__ These versions are skipped because npm failed to execute `prepublishonly` task before publishing.
+Enhacements:
+- Performance Improvement, closes ([#86](https://github.com/ObaidUrRehman/ng2-drag-drop/issues/86)) via 
+Pull Request ([#94](https://github.com/ObaidUrRehman/ng2-drag-drop/pull/94))
+
+## 2.8.0 (2017-09-14)
+Bugfixes:
+- Fixed AOT Compilation, closes
+([#95](https://github.com/ObaidUrRehman/ng2-drag-drop/issues/95))
+
+## 2.7.0 (2017-09-13)
+__Note:__ This version is broken and does not compile under AOT, use 2.8.0 instead.
+
+Enhacements:
+- Added `dragTransit` class, closes
+([#87](https://github.com/ObaidUrRehman/ng2-drag-drop/issues/87))
+
+Bugfixes:
+- Drag handle intermittently not working, closes
+([#89](https://github.com/ObaidUrRehman/ng2-drag-drop/issues/89))
+
+
+## 2.6.0 (2017-08-17)
 Enhacements:
 - DropScope can now be function, closes
 ([#79](https://github.com/ObaidUrRehman/ng2-drag-drop/issues/79))
@@ -12,13 +37,13 @@ Bugfixes:
 - Use DropEvent for Type Checking, pull request
 ([#63](https://github.com/ObaidUrRehman/ng2-drag-drop/pull/63))
 - Droppable not working between different components, closes ([#50](https://github.com/ObaidUrRehman/ng2-drag-drop/issues/50)) via pull request ([#61](https://github.com/ObaidUrRehman/ng2-drag-drop/pull/61))
+
 ## 2.0.1 (2017-05-29)
 Bugfixes:
 - Clear service data on drop end, closes
 ([#56](https://github.com/ObaidUrRehman/ng2-drag-drop/issues/56))
 
 ## 2.0.0 (2017-05-19)
-
 Bugfixes:
 - dragOverClass assigned to non valid drop targets, closes
 ([#28](https://github.com/ObaidUrRehman/ng2-drag-drop/issues/28))
